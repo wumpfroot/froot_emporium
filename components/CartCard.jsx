@@ -10,12 +10,10 @@ const CartCard = ({ id, quantity }) => {
 
 	return (
 		<div>
-			<div>
-				<h3>{itemData.title}</h3>
-				<span>x{quantity}</span>
-				<p>£{quantity * itemData.price.toFixed(2)}</p>
-				<button onClick={() => deleteFromCart(id)}>Delete</button>
-			</div>
+			<h3 className="text-lg">{itemData.title}</h3>
+			<span>x{quantity}</span>
+			<p>£{quantity * itemData.price.toFixed(2)}</p>
+			<button onClick={() => deleteFromCart(id)}>Delete</button>
 		</div>
 	);
 };

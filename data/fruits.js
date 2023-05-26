@@ -5,25 +5,25 @@
 
 const fruitItems = [
 	{
-		id: "price_1N9uxzIAb2npfdELGaJyzk29",
+		id: 1,
 		title: "Strawberries",
 		price: 2.0,
 		imgUrl: "/images/strawberries.jpg",
 	},
 	{
-		id: "price_1N9v1EIAb2npfdELzFQR5zPY",
+		id: 2,
 		title: "Bananas (pack of 6)",
 		price: 1.0,
 		imgUrl: "/images/bananas.jpg",
 	},
 	{
-		id: "price_1N9uzlIAb2npfdELQW8QRsLp",
+		id: 3,
 		title: "Pineapple (Whole)",
 		price: 1.2,
 		imgUrl: "/images/pineapple.jpg",
 	},
 	{
-		id: "price_1N9v2mIAb2npfdELbpjkYCsC",
+		id: 4,
 		title: "Pears (pack of 4)",
 		price: 1.8,
 		imgUrl: "/images/pears.jpg",
