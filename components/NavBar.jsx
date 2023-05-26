@@ -16,9 +16,11 @@ const NavBar = () => {
 
 	return (
 		<nav className="relative flex justify-between items-center p-3 bg-green-300">
-			<h1 className="text-white font-bold text-3xl border-2 border-black">
-				Froot Emporium
-			</h1>
+			<Link href={"/"}>
+				<h1 className="text-black font-bold text-2xl md:text-3xl">
+					Froot Emporium
+				</h1>
+			</Link>
 			<ul className="hidden gap-5 lg:flex">
 				<Link href={"/"}>
 					<motion.li whileHover={{ scale: 1.2, fontWeight: 700 }}>
@@ -61,13 +63,13 @@ const NavBar = () => {
 					className="absolute flex flex-col items-center justify-center left-0 bg-green-300 w-full h-screen"
 				>
 					<ul>
-						<Link href={"/"}>
+						<Link onClick={() => setMobileNav(false)} href={"/"}>
 							<li className="text-5xl mb-5">Home</li>
 						</Link>
-						<Link href={"/store"}>
+						<Link onClick={() => setMobileNav(false)} href={"/store"}>
 							<li className="text-5xl mb-5">Store</li>
 						</Link>
-						<Link href={"/about"}>
+						<Link onClick={() => setMobileNav(false)} href={"/about"}>
 							<li className="text-5xl">About</li>
 						</Link>
 					</ul>

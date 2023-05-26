@@ -2,16 +2,16 @@
 
 import CartCard from "@/components/CartCard";
 import { CartContext } from "@/context/CartContext";
-import Link from "next/link";
 import { useContext } from "react";
+import Link from "next/link";
 
 const CartPage = () => {
 	const { items, getTotalCost } = useContext(CartContext);
 	const totalItemsCount = items.reduce((sum, item) => sum + item.quantity, 0);
 
 	return (
-		<div>
-			<h1>Cart</h1>
+		<div className="grid grid-cols-1">
+			<h1 className="text-5xl">Cart</h1>
 			{totalItemsCount > 0 ? (
 				<>
 					{items.map((item) => (
@@ -19,7 +19,7 @@ const CartPage = () => {
 							<CartCard {...item} />
 						</div>
 					))}
-					<h2>Total Cost: £{getTotalCost().toFixed(2)}</h2>
+					<h2 className="text-3xl">Total Cost: £{getTotalCost().toFixed(2)}</h2>
 					<Link href={"/success"}>
 						<button
 							onClick={() => window.location.reload()}
