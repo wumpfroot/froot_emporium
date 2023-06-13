@@ -6,7 +6,7 @@ import { useContext } from "react";
 import Link from "next/link";
 
 const CartPage = () => {
-	const { items, getTotalCost } = useContext(CartContext);
+	const { items, getTotalCost, deleteAllFromCart } = useContext(CartContext);
 	const totalItemsCount = items.reduce((sum, item) => sum + item.quantity, 0);
 
 	return (
@@ -22,7 +22,7 @@ const CartPage = () => {
 					<h2 className="text-3xl">Total Cost: £{getTotalCost().toFixed(2)}</h2>
 					<Link href={"/success"}>
 						<button
-							onClick={() => window.location.reload()}
+							onClick={deleteAllFromCart}
 							className="text-black border border-black "
 						>
 							Checkout Froots
