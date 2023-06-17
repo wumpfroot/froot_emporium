@@ -10,7 +10,7 @@ const CartPage = () => {
 	const totalItemsCount = items.reduce((sum, item) => sum + item.quantity, 0);
 
 	const checkout = async () => {
-		await fetch("https://froot-emporium-stripe-be.cyclic.app/checkout", {
+		await fetch(`${process.env.BE_URI}/checkout`, {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
