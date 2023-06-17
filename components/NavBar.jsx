@@ -15,7 +15,7 @@ const NavBar = () => {
 	const [mobileNav, setMobileNav] = useState(false);
 
 	return (
-		<nav className="relative flex justify-between items-center p-3 bg-green-300">
+		<nav className="relative flex justify-between items-center p-3 bg-green-300 z-20">
 			<Link href={"/"}>
 				<h1 className="text-black font-bold text-2xl md:text-3xl">
 					Froot Emporium

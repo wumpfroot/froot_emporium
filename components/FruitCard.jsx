@@ -5,7 +5,7 @@ import { useContext } from "react";
 
 import Image from "next/image";
 
-const FruitCard = ({ id, title, price, imgUrl }) => {
+const FruitCard = ({ id, title, amount, price, imgUrl }) => {
 	const {
 		increaseQuantity,
 		decreaseQuantity,
@@ -25,6 +25,9 @@ const FruitCard = ({ id, title, price, imgUrl }) => {
 			/>
 			<div className="text-center p-6">
 				<h2 className="text-xl">{title}</h2>
+				<div>
+					<small>{amount}</small>
+				</div>
 				<h3 className="font-semibold text-xl my-3">£{price}</h3>
 				{itemQuantity > 0 ? (
 					<div>

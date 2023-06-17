@@ -13,7 +13,7 @@ const StorePage = () => {
 					<motion.div
 						initial={{ opacity: 0, x: -50 }}
 						animate={{ opacity: 1, x: 0 }}
-						transition={{ duration: 2 }}
+						transition={{ duration: 1 }}
 						className="mx-auto shadow h-[450px]"
 						key={item.id}
 					>
