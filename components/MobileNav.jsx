@@ -22,8 +22,7 @@ const MobileNav = () => {
 				<FaBars />
 			</motion.button>
 			<motion.div
-				animate={{ x: mobileNav ? 0 : "-100vw", opacity: 1 }}
-				initial={{ opacity: 0 }}
+				animate={{ x: mobileNav ? 0 : "-100vw" }}
 				className="absolute flex flex-col items-center justify-center left-0 bg-green-300 w-full h-screen"
 			>
 				<ul>
