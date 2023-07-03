@@ -29,7 +29,7 @@ const CartPage = () => {
 
 	return (
 		<div className="grid grid-cols-1">
-			<h1 className="text-5xl">Cart</h1>
+			<h1 className="text-5xl mb-11">Cart</h1>
 			{totalItemsCount > 0 ? (
 				<>
 					{items.map((item) => (
@@ -37,11 +37,13 @@ const CartPage = () => {
 							<CartCard {...item} />
 						</div>
 					))}
-					<h2 className="text-3xl">Total Cost: £{getTotalCost().toFixed(2)}</h2>
+					<h2 className="text-3xl my-11">
+						Total Cost: £{getTotalCost().toFixed(2)}
+					</h2>
 
 					<button
 						onClick={checkout}
-						className="text-black border border-black "
+						className="w-80 mx-auto text-black border border-black hover:bg-green-400 hover:text-white active:bg-green-300 ease-in duration-200"
 					>
 						Checkout Froots
 					</button>
