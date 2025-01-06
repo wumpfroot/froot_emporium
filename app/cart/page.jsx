@@ -10,7 +10,7 @@ const CartPage = () => {
 	const totalItemsCount = items.reduce((sum, item) => sum + item.quantity, 0);
 
 	const checkout = async () => {
-		await fetch("https://froot-emporium-stripe-be.cyclic.app/checkout", {
+		await fetch("https://froot-emporium-stripe-be.onrender.com/checkout", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
@@ -37,14 +37,9 @@ const CartPage = () => {
 							<CartCard {...item} />
 						</div>
 					))}
-					<h2 className="text-3xl my-11">
-						Total Cost: £{getTotalCost().toFixed(2)}
-					</h2>
+					<h2 className="text-3xl my-11">Total Cost: £{getTotalCost().toFixed(2)}</h2>
 
-					<button
-						onClick={checkout}
-						className="w-80 mx-auto text-black border border-black hover:bg-green-400 hover:text-white active:bg-green-300 ease-in duration-200"
-					>
+					<button onClick={checkout} className="w-80 mx-auto text-black border border-black hover:bg-green-400 hover:text-white active:bg-green-300 ease-in duration-200">
 						Checkout Froots
 					</button>
 				</>
