@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import Link from "next/link";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { FaBars } from "react-icons/fa";
 
 const MobileNav = () => {
@@ -21,10 +21,7 @@ const MobileNav = () => {
 			>
 				<FaBars />
 			</motion.button>
-			<motion.div
-				animate={{ x: mobileNav ? 0 : "-100vw" }}
-				className="absolute flex flex-col items-center justify-center left-0 bg-green-300 w-full h-screen"
-			>
+			<motion.div animate={{ x: mobileNav ? 0 : "-100vw" }} className="absolute flex flex-col items-center justify-center left-0 bg-green-300 w-full h-screen">
 				<ul>
 					<Link onClick={() => setMobileNav(false)} href={"/"}>
 						<li className="text-5xl mb-5">Home</li>

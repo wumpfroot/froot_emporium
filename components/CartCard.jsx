@@ -4,7 +4,7 @@ import { CartContext } from "@/context/CartContext";
 import { getItemData } from "@/data/fruits";
 import { useContext } from "react";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import Image from "next/image";
 
 const CartCard = ({ id, quantity, imgUrl }) => {
@@ -20,21 +20,11 @@ const CartCard = ({ id, quantity, imgUrl }) => {
 					<span className="text-lg">x{quantity}</span>
 				</div>
 				<p className="text-xl">£{itemPrice.toFixed(2)}</p>
-				<motion.button
-					whileHover={{ scale: 1.1 }}
-					className="bg-red-400"
-					onClick={() => deleteFromCart(id)}
-				>
+				<motion.button whileHover={{ scale: 1.1 }} className="bg-red-400" onClick={() => deleteFromCart(id)}>
 					Delete
 				</motion.button>
 			</div>
-			<Image
-				className="rounded-md"
-				src={itemData.imgUrl}
-				width={150}
-				height={150}
-				alt="cart fruit image"
-			/>
+			<Image className="rounded-md" src={itemData.imgUrl} width={150} height={150} alt="cart fruit image" />
 		</div>
 	);
 };
