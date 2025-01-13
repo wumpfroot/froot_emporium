@@ -8,6 +8,9 @@ import { motion } from "motion/react";
 import Image from "next/image";
 import { Roboto } from "next/font/google";
 
+import { Button } from "./ui/button";
+import { Plus, Minus } from "lucide-react";
+
 const roboto = Roboto({
 	subsets: ["latin"],
 	weight: "400",
@@ -29,24 +32,24 @@ const FruitCard = ({ id, title, amount, price, imgUrl }) => {
 					{itemQuantity > 0 ? (
 						<div>
 							<div className="flex justify-center items-center gap-3">
-								<motion.button whileTap={{ scale: 0.9 }} className="bg-green-400 text-4xl" onClick={() => decreaseQuantity(id)}>
-									➖
-								</motion.button>
+								<Button onClick={() => decreaseQuantity(id)}>
+									<Minus />
+								</Button>
 								<p className="text-xl">
 									<span className="font-semibold">{itemQuantity}</span> in cart
 								</p>
-								<motion.button whileTap={{ scale: 0.9 }} className="bg-green-400 text-4xl" onClick={() => increaseQuantity(id)}>
-									➕
-								</motion.button>
+								<Button onClick={() => increaseQuantity(id)}>
+									<Plus />
+								</Button>
 							</div>
-							<motion.button whileHover={{ scale: 1.1 }} className="bg-red-400 mt-2" onClick={() => deleteFromCart(id)}>
+							<Button className="bg-red-400 mt-2" onClick={() => deleteFromCart(id)}>
 								Remove All
-							</motion.button>
+							</Button>
 						</div>
 					) : (
-						<motion.button whileHover={{ scale: 1.1 }} className="bg-green-400 p-3" onClick={() => increaseQuantity(id)}>
+						<Button className="bg-green-400 p-3" onClick={() => increaseQuantity(id)}>
 							Add to cart
-						</motion.button>
+						</Button>
 					)}
 				</div>
 			</div>

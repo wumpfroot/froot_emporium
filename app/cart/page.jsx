@@ -3,7 +3,9 @@
 import CartCard from "@/components/CartCard";
 import { CartContext } from "@/context/CartContext";
 import { useContext } from "react";
-// import Link from "next/link";
+
+import { Button } from "@/components/ui/button";
+import { ShoppingCart } from "lucide-react";
 
 const CartPage = () => {
 	const { items, getTotalCost } = useContext(CartContext);
@@ -28,8 +30,8 @@ const CartPage = () => {
 	};
 
 	return (
-		<div className="grid grid-cols-1">
-			<h1 className="text-5xl mb-11">Cart</h1>
+		<div className="grid grid-cols-1 ml-5 text-center">
+			<h1 className="text-5xl my-11 ">Cart</h1>
 			{totalItemsCount > 0 ? (
 				<>
 					{items.map((item) => (
@@ -39,9 +41,9 @@ const CartPage = () => {
 					))}
 					<h2 className="text-3xl my-11">Total Cost: £{getTotalCost().toFixed(2)}</h2>
 
-					<button onClick={checkout} className="w-80 mx-auto text-black border border-black hover:bg-green-400 hover:text-white active:bg-green-300 ease-in duration-200">
-						Checkout Froots
-					</button>
+					<Button className="mx-auto" onClick={checkout}>
+						Checkout Froots <ShoppingCart />
+					</Button>
 				</>
 			) : (
 				<h2>No fruits in cart...</h2>
