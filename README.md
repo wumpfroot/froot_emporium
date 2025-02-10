@@ -27,12 +27,12 @@ To get started with the project locally, follow these steps:
 
 Clone the repository:
 ```bash
-git clone https://github.com/yourusername/froot-emporium.git
+git clone https://github.com/wumpfroot/froot_emporium.git
 ```
 
 Navigate to the project directory:
 ```bash
-cd froot-emporium
+cd froot_emporium
 ```
 Install dependencies:
 ```bash
