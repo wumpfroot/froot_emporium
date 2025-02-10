@@ -1,35 +1,63 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Froot Emporium 🍉🍎🍍
 
-## Getting Started
+Froot Emporium is a mock e-commerce website where users can browse and buy fruits at affordable prices. The website is built using Next.js, TailwindCSS, and Motion for smooth animations. Users can add fruits to their cart and simulate card payments using Stripe in test mode.
+Demo
 
-First, run the development server:
+Check out the live demo of the site here: Froot Emporium
+Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+    Browse a variety of fruits with real-time pricing and availability
+    Add/remove fruits to/from your cart
+    Simulate card payments using Stripe (in test mode)
+    Responsive design using TailwindCSS for easy accessibility on mobile and desktop
+    Smooth animations powered by Motion to enhance user experience
+    State management across the site using React Context API
+    Built with Next.js for server-side rendering and fast page loads
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Technologies Used
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+    Next.js: A React framework for building static and dynamic websites with server-side rendering
+    TailwindCSS: A utility-first CSS framework for building custom designs quickly
+    Motion: Animation library for React that adds smooth and interactive animations to the UI
+    Stripe: Simulated card payments (using Stripe's test mode for safe transactions)
+    React Context API: Efficient state management for global state across the site
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Installation
 
-## Learn More
+To get started with the project locally, follow these steps:
 
-To learn more about Next.js, take a look at the following resources:
+    Clone the repository:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+git clone https://github.com/yourusername/froot-emporium.git
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Navigate to the project directory:
 
-## Deploy on Vercel
+cd froot-emporium
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Install dependencies:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# froot_emporium
+npm install
+
+Create a .env.local file in the root of the project and add your Stripe test key:
+
+NEXT_PUBLIC_STRIPE_PUBLIC_KEY=your_test_stripe_public_key_here
+
+Start the development server:
+
+    npm run dev
+
+    Visit http://localhost:3000 in your browser to view the website locally.
+
+How It Works
+
+    Home Page: Displays a list of fruits with images, names, and prices. Users can view individual product details.
+    Cart: Allows users to view added fruits, update quantities, or remove them.
+    Checkout: Simulate a payment process using Stripe’s test mode. Payments won’t be processed in live mode.
+    Context API: Used to manage the shopping cart state globally across the app, so users can add/remove items from the cart at any point.
+
+Contributing
+
+Feel free to fork the repo, make changes, and create pull requests! Contributions are welcome, whether it's improving the UI, fixing bugs, or adding new features.
+License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
